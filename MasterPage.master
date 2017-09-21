@@ -1,0 +1,188 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>CrossFit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/design.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+    .lab
+    {
+        font-size:medium;
+        font-family:Verdana;
+        text-align:left;
+        padding-left:200px;
+        vertical-align:top;
+    }
+    .tx
+    {
+           font-size:medium;
+           text-align:left; 
+           vertical-align:top;   
+        
+    }
+    .hea
+    {
+        font-size:x-large;
+        font-family:Cambria;
+        text-align:center;
+        font-weight:bold;
+    }
+    .drop
+    {
+        font-size:medium;
+           text-align:left;    
+           width:100%;
+           height:50px;
+           border:2px solid red;
+         -moz-border-radius: 10px;
+         vertical-align:top;
+    }
+    .content {
+    max-width: 1300px;
+    margin: auto;
+}
+    </style>
+  </head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <form id="Form1" runat="server">
+<nav class="navbar navbar-default navbar-fixed-top">
+   
+  <div class="container">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     
+    </div>
+    <asp:Panel ID="Panel1" runat="server" Height="43px">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="HomePage.aspx">Login</a></li>
+       
+        
+      </ul>
+    </div>
+    </asp:Panel>
+
+
+       <div class="content">
+    <asp:Panel ID="Panel2" runat="server">
+        <a class="navbar-brand" href="home_sign_in.aspx">CrossFit</a>
+  <div class="collapse navbar-collapse" id="Div1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="ViewUser.aspx">View Customer</a></li>
+           <li><a href="Add-Trainee.aspx">Trainer Details</a></li>
+       
+    <li><a href="view_trainee.aspx">View Meetings</a></li>
+        <li><a href="addsuppliers.aspx">Add Suppliers</a></li>
+        
+        <li><a href="viewsuppliers.aspx">View Suppliers</a></li>
+               
+         
+		    <li><a href="Logout.aspx">Logout</a></li>
+      </ul>
+    </div>
+    </asp:Panel>
+           </div>
+
+       
+
+    <asp:Panel ID="Panel3" runat="server">
+        <a class="navbar-brand" href="home_sign_in.aspx">CrossFit</a>
+  <div class="collapse navbar-collapse" id="Div2">
+
+      <ul class="nav navbar-nav navbar-right">
+          
+      <li><a href="My.aspx">Profile</a></li>
+   
+        <li><a href="BMI.aspx">BMI </a></li>
+        
+          <li><a href="gifs.aspx">Workout </a></li>
+           <li><a href="Videos.aspx">Videos</a></li>
+        <li><a href="trainer_book.aspx">Book Meeting</a></li>
+              
+         
+        <li><a href="E-Commerce.aspx">Store</a></li>
+          <li><a href="Contact Us.aspx">Contact Us</a></li>
+		    <li><a href="Logout.aspx">Logout</a></li>
+       </ul>
+    
+        
+    </asp:Panel>
+           
+
+
+       <div class="content">
+    <asp:Panel ID="Panel4" runat="server">
+  <div class="collapse navbar-collapse" id="Div3">
+      <ul class="nav navbar-nav navbar-right">
+     
+      <li><a href="ChangePassword.aspx">Change Password</a></li>
+        
+       
+		    <li><a href="Logout.aspx">Logout</a></li>
+       </ul>
+    </div>
+    </asp:Panel>
+           </div>
+  </div>
+  </nav>
+
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+     
+    </div >
+    
+   
+    </div>
+  </div>
+
+
+
+    
+<!-- Container (student section) -->
+       
+        <!-- Container (Visitor Section) -->
+    <div id="Visitor" class="form-group">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+        
+<!-- Container (parent section) -->
+
+        <!-- Container (Faculty section) -->
+   
+<!-- Container (admin section) -->
+
+        
+
+
+   <div class="panel-footer" style="background-color:#F20000; width:100%;color:White;text-align:right;padding-left:10px;padding-right:10px"><br /><div align="left">Follow us on&nbsp;&nbsp; 
+       <asp:Image ID="Image1" runat="server" ImageUrl="~/images/tweet.png" onClick="https://twitter.com/login" 
+           Width="25px" Height="25px" EnableTheming="True" />&nbsp;<asp:Image ID="Image2" runat="server" 
+           ImageUrl="~/images/face.png" Width="25px" Height="25px" style="margin-left: 9px" /></div>
+       <i style="color: #fff; font-family: Calibri; font-size: 19.2px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(242, 0, 0);">Copyright © 2017 CrossFit</i><br /></div>
+
+
+    </form>
+</body>
+</html>
